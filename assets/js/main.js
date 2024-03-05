@@ -13,20 +13,24 @@ if (navToggle) {
 // ====== Menu hidden =======
 if (navClose) {
   navClose.addEventListener("click", () => {
-    navMenu.remove("show-menu");
+    navMenu.classList.remove("show-menu");
   });
 }
 
 // ========== REMOVE MENU MOBILE ==========
+const navLink = document.querySelectorAll(".nav__Link");
 
+const linkAction = () => {
+  const navMenu = document.getElementById("nav-menu");
+  // when we click on each nav__link, we remove the show-menu class
+  navMenu.classList.remove("show-menu");
+};
+navLink.forEach(n => n.addEventListener("click", linkAction));
 
 // ========== ADD BLUR HEADER ==========
 
-
 // ========== SHOW SCROLL UP ==========
 
-
 // ========== SCROLL SECTIONS ACTIVE LINK ==========
-
 
 // ========== SCROLL REVEAL ANIMATION ==========
