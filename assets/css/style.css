@@ -184,7 +184,7 @@ img {
 }
 
 .nav__link {
-    color: var(--text-color);
+    color: var(--title-color);
     font-weight: var(--font-semi-bold);
     transition: color .4s;
 }
@@ -219,7 +219,7 @@ img {
 }
 
 /* Active link */
-active-link{
+.active-link {
     color: var(--first-color);
 }
 
@@ -568,6 +568,6 @@ active-link{
 }
 
 /* show Scroll Up */
-.show-scroll{
+.show-scroll {
     bottom: 3rem;
 }
