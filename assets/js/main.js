@@ -25,7 +25,7 @@ const linkAction = () => {
   // when we click on each nav__link, we remove the show-menu class
   navMenu.classList.remove("show-menu");
 };
-navLink.forEach(n => n.addEventListener("click", linkAction));
+navLink.forEach((n) => n.addEventListener("click", linkAction));
 
 // ========== ADD BLUR HEADER ==========
 const blurHeader = () => {
@@ -47,7 +47,7 @@ const scrollUp = () => {
 };
 window.addEventListener("scroll", scrollUp);
 
-// ========== SCROLL SECTIONS ACTIVE LINK ========== 
+// ========== SCROLL SECTIONS ACTIVE LINK ==========
 const sections = document.querySelectorAll("section[id]");
 
 const scrollActive = () => {
@@ -71,4 +71,16 @@ const scrollActive = () => {
 };
 
 window.addEventListener("scroll", scrollActive);
+
 // ========== SCROLL REVEAL ANIMATION ==========
+const sr = ScrollReveal({
+  origin: "top",
+  distance: "80px",
+  duration: 2500,
+  delay: 300, //reset:true, // Animation repeat
+});
+
+sr.reveal(`.home__img,.new__data,.card__img,.contact__content,.footer`);
+sr.reveal(`.home__data,.care__list,.contact__img`, { delay: 500 });
+sr.reveal(`.new__card`, { delay: 500, interval: 100 });
+sr.reveal(`.shop__card`, { interval: 100 });
